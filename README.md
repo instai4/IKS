@@ -1,4 +1,4 @@
-# Indian Knowledge System
+# Indian Knowledge System.
 
 A cinematic and immersive web experience exploring the depth of Indian civilisation through science, mathematics, astronomy, medicine, architecture, philosophy, naval engineering, music, and cultural achievements.
 
