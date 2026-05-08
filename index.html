@@ -40,6 +40,10 @@ filter="url(%23glow)">ॐ</text>
 
   <!-- PLACE AFTER <body> -->
 
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-glow"></div>
+
   <div id="intro-overlay">
 
     <div class="intro-glow-line"></div>
@@ -813,36 +817,61 @@ filter="url(%23glow)">ॐ</text>
             <svg class="vis-svg" viewBox="0 0 400 400">
               <defs>
                 <radialGradient id="ged1" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stop-color="#A06414" stop-opacity="0.15" />
+                  <stop offset="0%" stop-color="#A06414" stop-opacity="0.22" />
                   <stop offset="100%" stop-color="#A06414" stop-opacity="0" />
                 </radialGradient>
+                <linearGradient id="brickGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#C9952A" stop-opacity="0.2" />
+                  <stop offset="100%" stop-color="#C9952A" stop-opacity="0.05" />
+                </linearGradient>
               </defs>
               <circle cx="200" cy="200" r="180" fill="url(#ged1)" />
-              <!-- Nalanda campus outline -->
-              <g stroke="#C9952A" stroke-width="0.6" stroke-opacity="0.4" fill="none">
-                <rect x="60" y="90" width="280" height="220" rx="4" />
-                <rect x="80" y="110" width="60" height="80" rx="2" />
-                <rect x="170" y="110" width="60" height="80" rx="2" />
-                <rect x="260" y="110" width="60" height="80" rx="2" />
-                <rect x="80" y="210" width="60" height="80" rx="2" />
-                <rect x="170" y="210" width="60" height="80" rx="2" />
-                <rect x="260" y="210" width="60" height="80" rx="2" />
+              
+              <!-- Main Temple/Stupa Silhouette (Nalanda style) -->
+              <g transform="translate(200, 240)">
+                <!-- Base Tiers -->
+                <rect x="-80" y="0" width="160" height="15" rx="1" fill="url(#brickGrad)" stroke="#C9952A" stroke-width="0.8" stroke-opacity="0.4" />
+                <rect x="-70" y="-15" width="140" height="15" rx="1" fill="url(#brickGrad)" stroke="#C9952A" stroke-width="0.8" stroke-opacity="0.4" />
+                <rect x="-60" y="-30" width="120" height="15" rx="1" fill="url(#brickGrad)" stroke="#C9952A" stroke-width="0.8" stroke-opacity="0.4" />
+                
+                <!-- Main Body -->
+                <rect x="-45" y="-90" width="90" height="60" rx="2" fill="#1A1A1A" stroke="#C9952A" stroke-width="1" stroke-opacity="0.6" />
+                
+                <!-- Arched Windows (Vihara Style) -->
+                <g fill="none" stroke="#C9952A" stroke-width="0.6" stroke-opacity="0.5">
+                  <path d="M-30,-75 Q-30,-85 -20,-85 Q-10,-85 -10,-75 L-10,-60 L-30,-60 Z" />
+                  <path d="M10,-75 Q10,-85 20,-85 Q30,-85 30,-75 L30,-60 L10,-60 Z" />
+                </g>
+                
+                <!-- Upper Tier -->
+                <rect x="-30" y="-115" width="60" height="25" rx="1" fill="#1A1A1A" stroke="#C9952A" stroke-width="0.8" stroke-opacity="0.5" />
+                
+                <!-- Top Stupa Dome -->
+                <path d="M-15,-115 Q-15,-135 0,-135 Q15,-135 15,-115 Z" fill="#C9952A" opacity="0.15" stroke="#C9952A" stroke-width="1" stroke-opacity="0.6" />
+                <line x1="0" y1="-135" x2="0" y2="-150" stroke="#C9952A" stroke-width="0.8" stroke-opacity="0.6" />
+                <circle cx="0" cy="-152" r="2" fill="#C9952A" opacity="0.7" />
               </g>
-              <!-- Stupa dome -->
-              <ellipse cx="200" cy="155" rx="18" ry="10" fill="#C9952A" opacity="0.15" stroke="#C9952A"
-                stroke-width="0.8" stroke-opacity="0.5" />
-              <text x="80" y="158" text-anchor="middle" font-size="8" fill="#C9952A" opacity="0.5"
-                font-family="sans-serif">गणित</text>
-              <text x="200" y="158" text-anchor="middle" font-size="8" fill="#C9952A" opacity="0.5"
-                font-family="sans-serif">ज्योतिष</text>
-              <text x="290" y="158" text-anchor="middle" font-size="8" fill="#C9952A" opacity="0.5"
-                font-family="sans-serif">आयुर्वेद</text>
-              <text x="80" y="258" text-anchor="middle" font-size="8" fill="#C9952A" opacity="0.5"
-                font-family="sans-serif">न्याय</text>
-              <text x="200" y="258" text-anchor="middle" font-size="8" fill="#C9952A" opacity="0.5"
-                font-family="sans-serif">व्याकरण</text>
-              <text x="290" y="258" text-anchor="middle" font-size="8" fill="#C9952A" opacity="0.5"
-                font-family="sans-serif">दर्शन</text>
+
+              <!-- Library Stacks (Dharmaganja) -->
+              <g opacity="0.3" stroke="#C9952A" stroke-width="0.6" fill="none">
+                <rect x="70" y="210" width="30" height="45" rx="1" />
+                <line x1="75" y1="220" x2="95" y2="220" />
+                <line x1="75" y1="230" x2="95" y2="230" />
+                <line x1="75" y1="240" x2="95" y2="240" />
+
+                <rect x="300" y="210" width="30" height="45" rx="1" />
+                <line x1="305" y1="220" x2="325" y2="220" />
+                <line x1="305" y1="230" x2="325" y2="230" />
+                <line x1="305" y1="240" x2="325" y2="240" />
+              </g>
+
+              <!-- Symbols of Knowledge -->
+              <g fill="#C9952A" opacity="0.4" font-family="serif" font-size="10">
+                <text x="100" y="120" text-anchor="middle">शास्त्र</text>
+                <text x="300" y="120" text-anchor="middle">तर्क</text>
+                <text x="200" y="80" text-anchor="middle" font-size="14">धर्म</text>
+              </g>
+
               <text x="200" y="375" text-anchor="middle" font-size="9" fill="#C9952A" opacity="0.4" letter-spacing="4"
                 font-family="sans-serif">नालंदा · तक्षशिला · विक्रमशिला</text>
             </svg>
@@ -1102,29 +1131,52 @@ filter="url(%23glow)">ॐ</text>
                   <stop offset="0%" stop-color="#8B1A1A" stop-opacity="0.18" />
                   <stop offset="100%" stop-color="#8B1A1A" stop-opacity="0" />
                 </radialGradient>
+                <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#2C2C2C" />
+                  <stop offset="50%" stop-color="#4A4A4A" />
+                  <stop offset="100%" stop-color="#1A1A1A" />
+                </linearGradient>
+                <filter id="ironGlow">
+                  <feGaussianBlur stdDeviation="2" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
               </defs>
               <circle cx="200" cy="200" r="180" fill="url(#gme1)" />
-              <rect x="188" y="58" width="24" height="232" rx="4" fill="#C9952A" opacity="0.12" stroke="#C9952A"
-                stroke-width="0.8" stroke-opacity="0.5" />
-              <ellipse cx="200" cy="62" rx="32" ry="11" fill="none" stroke="#C9952A" stroke-width="1"
-                stroke-opacity="0.6" />
-              <rect x="172" y="286" width="56" height="14" rx="2" fill="none" stroke="#C9952A" stroke-width="0.8"
-                stroke-opacity="0.5" />
-              <ellipse cx="200" cy="174" rx="20" ry="100" fill="#C9952A" opacity="0.04" />
-              <g fill="#E8752A" opacity="0.5">
-                <circle cx="80" cy="118" r="5" />
-                <circle cx="110" cy="98" r="5" />
-                <circle cx="95" cy="143" r="5" />
-                <circle cx="125" cy="128" r="5" />
-                <line x1="80" y1="118" x2="110" y2="98" stroke="#E8752A" stroke-width="0.8" stroke-opacity="0.4" />
-                <line x1="80" y1="118" x2="95" y2="143" stroke="#E8752A" stroke-width="0.8" stroke-opacity="0.4" />
-                <line x1="110" y1="98" x2="125" y2="128" stroke="#E8752A" stroke-width="0.8" stroke-opacity="0.4" />
-                <line x1="95" y1="143" x2="125" y2="128" stroke="#E8752A" stroke-width="0.8" stroke-opacity="0.4" />
+              
+              <!-- Ground/Base -->
+              <path d="M140,320 L260,320 L270,335 L130,335 Z" fill="#1A1A1A" stroke="#C9952A" stroke-width="1" stroke-opacity="0.4" />
+              
+              <!-- Pillar Shaft (Tapered) -->
+              <path d="M192,85 L208,85 L214,320 L186,320 Z" fill="url(#metalGrad)" stroke="#C9952A" stroke-width="0.8" stroke-opacity="0.6" filter="url(#ironGlow)" />
+              
+              <!-- Shaft Details (Forging lines) -->
+              <g stroke="#C9952A" stroke-width="0.3" stroke-opacity="0.2">
+                <line x1="196" y1="100" x2="194" y2="310" />
+                <line x1="204" y1="100" x2="206" y2="310" />
+                <line x1="189" y1="200" x2="211" y2="200" />
+                <line x1="187" y1="260" x2="213" y2="260" />
               </g>
-              <g opacity="0.2" stroke="#C9952A" stroke-width="0.8" fill="none">
-                <path d="M290,138 C310,148 320,158 300,168 C280,178 310,188 290,198 C270,208 310,218 290,228" />
-                <path d="M305,133 C325,143 335,153 315,163 C295,173 325,183 305,193 C285,203 325,213 305,223" />
+
+              <!-- Capital (The Top Section) -->
+              <g transform="translate(200, 85)">
+                <!-- 1. The Bell Shape (Inverted Lotus) -->
+                <path d="M-12,0 Q-15,-15 -22,-25 L22,-25 Q15,-15 12,0 Z" fill="#2C2C2C" stroke="#C9952A" stroke-width="0.8" stroke-opacity="0.7" />
+                <!-- 2. Ribbed sections (Amalaka style) -->
+                <rect x="-18" y="-32" width="36" height="7" rx="1" fill="#1A1A1A" stroke="#C9952A" stroke-width="0.6" stroke-opacity="0.5" />
+                <rect x="-15" y="-38" width="30" height="6" rx="1" fill="#1A1A1A" stroke="#C9952A" stroke-width="0.6" stroke-opacity="0.5" />
+                <!-- 3. Square Abacus -->
+                <rect x="-20" y="-45" width="40" height="7" rx="0.5" fill="#2C2C2C" stroke="#C9952A" stroke-width="0.8" stroke-opacity="0.6" />
+                <!-- 4. Topmost point -->
+                <rect x="-8" y="-55" width="16" height="10" rx="0.5" fill="#1A1A1A" stroke="#C9952A" stroke-width="0.6" stroke-opacity="0.5" />
               </g>
+
+              <!-- Symbols of Metallurgy (Wootz Steel Texture) -->
+              <g opacity="0.1" stroke="#C9952A" stroke-width="0.5" fill="none">
+                <path d="M280,100 Q300,110 280,120 Q320,130 290,140" />
+                <path d="M300,105 Q320,115 300,125 Q340,135 310,145" />
+                <path d="M100,100 Q80,110 100,120 Q60,130 90,140" />
+              </g>
+
               <text x="200" y="375" text-anchor="middle" font-size="9" fill="#C9952A" opacity="0.4" letter-spacing="4"
                 font-family="sans-serif">वूट्ज़ · ज़ावर · दिल्ली स्तंभ</text>
             </svg>
